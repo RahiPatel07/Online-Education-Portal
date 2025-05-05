@@ -1,0 +1,221 @@
+/* Progress Overview Section */
+.progress-overview {
+    background: white;
+    border-radius: 12px;
+    padding: 2rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin-bottom: 2rem;
+}
+
+.progress-overview h3 {
+    color: var(--primary-color);
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+/* Progress Stats */
+.progress-stats {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+
+.stat-item {
+    text-align: center;
+    padding: 1.5rem;
+    background: #f8f9fa;
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+}
+
+.stat-item:hover {
+    transform: translateY(-5px);
+}
+
+.stat-value {
+    display: block;
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: var(--primary-color);
+    margin-bottom: 0.5rem;
+}
+
+.stat-label {
+    color: var(--text-color);
+    font-size: 1rem;
+}
+
+/* Progress Chart */
+.progress-chart {
+    margin-top: 2rem;
+    padding: 1rem;
+    background: #f8f9fa;
+    border-radius: 8px;
+}
+
+/* Course Progress List */
+.course-progress-list {
+    background: white;
+    border-radius: 12px;
+    padding: 2rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin-bottom: 2rem;
+}
+
+.course-progress-list h3 {
+    color: var(--primary-color);
+    margin-bottom: 1.5rem;
+}
+
+.course-progress {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    padding: 1.5rem;
+    background: #f8f9fa;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+}
+
+.course-info {
+    flex: 1;
+}
+
+.course-info h4 {
+    color: var(--text-color);
+    margin-bottom: 0.5rem;
+}
+
+.course-info p {
+    color: var(--light-color);
+    font-size: 0.9rem;
+}
+
+.progress-bar {
+    width: 200px;
+    height: 8px;
+    background: #e9ecef;
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.progress {
+    height: 100%;
+    background: var(--primary-color);
+    transition: width 0.3s ease;
+}
+
+.progress-percentage {
+    font-weight: bold;
+    color: var(--primary-color);
+    min-width: 50px;
+    text-align: right;
+}
+
+/* Achievements Section */
+.achievements {
+    background: white;
+    border-radius: 12px;
+    padding: 2rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.achievements h3 {
+    color: var(--primary-color);
+    margin-bottom: 1.5rem;
+}
+
+.achievements-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 1.5rem;
+}
+
+.achievement-badge {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem;
+    background: #f8f9fa;
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+}
+
+.achievement-badge:hover {
+    transform: translateY(-5px);
+}
+
+.achievement-badge.locked {
+    opacity: 0.6;
+}
+
+.badge-icon {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--primary-color);
+    color: white;
+    border-radius: 50%;
+    font-size: 1.2rem;
+}
+
+.badge-info h4 {
+    color: var(--text-color);
+    margin-bottom: 0.25rem;
+    font-size: 1rem;
+}
+
+.badge-info p {
+    color: var(--light-color);
+    font-size: 0.8rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .progress-stats {
+        grid-template-columns: 1fr;
+    }
+
+    .course-progress {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .progress-bar {
+        width: 100%;
+    }
+
+    .progress-percentage {
+        text-align: left;
+    }
+
+    .achievements-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Dark Mode Support */
+@media (prefers-color-scheme: dark) {
+    .progress-overview,
+    .course-progress-list,
+    .achievements {
+        background: #2d2d2d;
+    }
+
+    .stat-item,
+    .course-progress,
+    .achievement-badge {
+        background: #1a1a1a;
+    }
+
+    .progress-chart {
+        background: #1a1a1a;
+    }
+
+    .progress-bar {
+        background: #333;
+    }
+} 
